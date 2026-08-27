@@ -1,0 +1,49 @@
+---
+name: orchestrate-engineering-work
+description: Orchestrate substantial software-engineering work through persistent project state, dependency-aware work units, validation checkpoints, and controlled autonomy. Use for multi-step builds, major features, refactors, migrations, complex debugging, deployments, integrations, or other work where unverified changes could compound; do not add this process to a small, well-understood edit that can be implemented and verified directly.
+---
+
+# Orchestrate Engineering Work
+
+Apply AI-SWE-002's core principle: complex engineering work must be orchestrated, not treated as one uninterrupted autonomous operation.
+
+## Scale the Process
+
+Choose orchestration depth from complexity, risk, dependency depth, ambiguity, irreversibility, and validation cost.
+
+- For a low-risk, well-understood change, inspect enough context, implement, and validate.
+- For substantial work, preserve state, decompose into coherent dependency-aware Work Units, validate each meaningful transition, record important results, and continue.
+- Do not fragment work into file-level microtasks or use planning to postpone implementation.
+
+## Operating Loop
+
+1. Load the relevant project state and inspect the actual system before changing it.
+2. Clarify the objective, constraints, acceptance criteria, and unresolved decisions.
+3. Map dependencies and decompose the objective into bounded Work Units.
+4. Select a ready Work Unit whose prerequisites are sufficiently complete and validated.
+5. Execute within its scope.
+6. Validate with checks appropriate to the change and its risk.
+7. If validation fails, diagnose and correct it before dependent work proceeds.
+8. Record meaningful decisions, results, issues, and the next ready action.
+9. Repeat until Work Units and required cross-system validation are complete.
+
+Keep the distance from decision to implementation to verification short.
+
+## Load Only Relevant Detail
+
+- For reconstructing, reconciling, or updating project state, read [references/project-state.md](references/project-state.md).
+- For decomposition, dependency graphs, Work Unit boundaries, and completion records, read [references/work-units.md](references/work-units.md).
+- For validation selection, risk-based checkpoints, failure recovery, drift control, and completion classification, read [references/validation-and-control.md](references/validation-and-control.md).
+
+## Essential Constraints
+
+- Inspect available code, requirements, architecture, configuration, schemas, tests, and recent changes rather than guessing.
+- Treat project state as operational memory, not a replacement for source code or authoritative documentation.
+- Do not silently ignore conflicts between recorded state, documentation, and implementation. Identify the conflict and determine what governs the current task.
+- Do not knowingly build dependent work on failed or materially unverified foundations.
+- Keep human intervention proportional to risk. Ask for a decision when product intent or a high-impact tradeoff cannot be safely inferred; obtain explicit authorization for irreversible or production-critical operations.
+- Preserve the user's scope and permissions. Orchestration does not authorize additional external actions or permanent project-management artifacts.
+
+## Progress Communication
+
+Report progress around meaningful engineering outcomes: what changed, what validation passed or failed, what decisions or risks emerged, and what comes next. Distinguish implementation completed from validation completed.
