@@ -1,0 +1,67 @@
+Mzansi-Market/
+│
+├── src/
+│   ├── components/
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── Sidebar.jsx
+│   │
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── CartContext.jsx
+│   │
+│   ├── data/
+│   │   ├── orders.js
+│   │   └── products.js
+│   │
+│   ├── layouts/
+│   │   ├── StoreLayout.jsx
+│   │   ├── ProductAdminLayout.jsx
+│   │   └── FulfilmentLayout.jsx
+│   │
+│   ├── pages/
+│   │   ├── auth/
+│   │   │   ├── LoginPage.jsx
+│   │   │   └── RegisterPage.jsx
+│   │   │
+│   │   ├── customer/
+│   │   │   ├── HomePage.jsx
+│   │   │   ├── ShopPage.jsx
+│   │   │   ├── ProductPage.jsx
+│   │   │   ├── CartPage.jsx
+│   │   │   ├── CheckoutPage.jsx
+│   │   │   ├── OrdersPage.jsx
+│   │   │   └── ReturnsPage.jsx
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── DashboardPage.jsx
+│   │   │   ├── ProductsPage.jsx
+│   │   │   ├── ProductFormPage.jsx
+│   │   │   ├── CategoriesPage.jsx
+│   │   │   ├── InventoryPage.jsx
+│   │   │   └── PromotionsPage.jsx
+│   │   │
+│   │   └── fulfilment/
+│   │       ├── DashboardPage.jsx
+│   │       ├── OrdersPage.jsx
+│   │       ├── OrderPage.jsx
+│   │       ├── PickingPage.jsx
+│   │       ├── PackingPage.jsx
+│   │       ├── DispatchPage.jsx
+│   │       └── CompletedPage.jsx
+│   │
+│   ├── routes/
+│   │   ├── AppRoutes.jsx
+│   │   └── RoleRoute.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── styles.css
+│   └── utils.js
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js

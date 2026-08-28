@@ -1,0 +1,3 @@
+-- Enable RLS and define policies here.
+-- Important: React RoleRoute protects only the UI.
+-- Supabase Row Level Security must enforce every permission at database level.

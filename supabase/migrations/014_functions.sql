@@ -1,0 +1,8 @@
+-- Database functions / triggers can be added here:
+-- create customer profile after signup
+-- assign default customer role
+-- generate order number
+-- reserve stock atomically
+-- release stock
+-- record audit events
+-- calculate reseller commissions
